@@ -1,20 +1,14 @@
-# Codewars 解题集
+# 《边学边玩酷JS》
 
-链接： <https://codewars.js.cool/>
+链接： <https://learn.js.cool/>
 
 作者： Willin Wang
 
-![](https://www.codewars.com/users/jsv0/badges/large)
+## 作品集合
 
-![98](https://cloud.githubusercontent.com/assets/1890238/18192044/13685226-7103-11e6-9cb0-ba9ec049ab9e.png)
-
-## 语言
-
-主要： JavaScript
-
-偶尔会出现一些Ruby，C#，PHP。
-
-如果有题目想要共同探讨，可以提Issue发给我。本人算法能力低下，请勿见怪。
+- 《不可替代的团队领袖培养计划》: <https://leader.js.cool>
+- 《边学边玩酷js》: <https://learn.js.cool>
+- 《Codewars 解题集》: <https://codewars.js.cool>
 
 ## License
 

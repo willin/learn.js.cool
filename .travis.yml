@@ -15,5 +15,5 @@ script:
   - git init
   - git add .
   - git commit -m "Gitbook Auto Deployed"
-  - git push --force "https://${GH_TOKEN}@github.com/willin/codewars.js.cool.git" master:gh-pages
-  - git push --force "https://willin:${CODING_TOKEN}@git.dev.tencent.com/willin/codewars.js.cool.git" master:master
+  - git push --force "https://${GH_TOKEN}@github.com/willin/learn.js.cool.git" master:gh-pages
+  - git push --force "https://willin:${CODING_TOKEN}@git.dev.tencent.com/willin/learn.js.cool.git" master:master

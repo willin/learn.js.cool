@@ -2,7 +2,7 @@
   var bp = document.createElement('script');
   var curProtocol = window.location.protocol.split(':')[0];
   if (curProtocol === 'https') {
-      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
   }
   else {
       bp.src = 'http://push.zhanzhang.baidu.com/push.js';
@@ -25,7 +25,12 @@ window.onload = function() {
           ga('send', 'event', 'Adblock', 'Yes');
       } else if (typeof _gaq !== 'undefined') {
           _gaq.push(['_trackEvent', 'Adblock', 'Yes']);
+      } else {
+        (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-5059418763237956",
+          enable_page_level_ads: true
+        });
       }
     }
-  }, 2000); 
+  }, 2000);
 };
