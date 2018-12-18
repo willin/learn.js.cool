@@ -1,5 +1,7 @@
 # 《边学边玩酷JS》
 
+[![Build Status](https://travis-ci.org/willin/learn.js.cool.svg?branch=master)](https://travis-ci.org/willin/learn.js.cool)
+
 作者： Willin Wang
 
 ## 作品集合
