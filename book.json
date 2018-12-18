@@ -37,7 +37,7 @@
   "plugins": [
     "page-footer-ex",
     "addcssjs",
-    "-atoc",
+    "atoc",
     "fancybox",
     "-github",
     "-edit-link",
