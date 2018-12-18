@@ -1,0 +1,108 @@
+
+{
+  "title": "Codewars 解题集",
+  "description": "Author: Willin Wang",
+  "language": "zh-hans",
+  "gitbook": ">=3.2.3",
+  "structure": {
+    "readme": "INTRO.md"
+  },
+  "links": {
+    "sharing": {
+      "all": null,
+      "facebook": null,
+      "google": null,
+      "twitter": null,
+      "weibo": null
+    },
+    "sidebar": {
+      "初瘦": "https://v0.chat/"
+    }
+  },
+  "pdf": {
+    "toc": true,
+    "fontSize": 12,
+    "footerTemplate": null,
+    "headerTemplate": null,
+    "margin": {
+      "bottom": 36,
+      "left": 62,
+      "right": 62,
+      "top": 36
+    },
+    "pageNumbers": true,
+    "paperSize": "a4"
+  },
+  "plugins": [
+    "page-footer-ex",
+    "addcssjs",
+    "-atoc",
+    "fancybox",
+    "-github",
+    "-edit-link",
+    "google-adsense",
+    "-maxiang",
+    "-wordcount",
+    "-theme-material",
+    "highlight",
+    "-lunr",
+    "fontsettings",
+    "-sharing",
+    "donate",
+    "search",
+    "sitemap"
+  ],
+  "pluginsConfig": {
+    "donate": {
+      "wechat": "http://sh.gg/static/images/wx.png",
+      "alipay": "http://sh.gg/static/images/qr.png",
+      "title": "如果您觉得受益，请打赏支持！",
+      "button": "赏"
+    },
+    "github": {
+      "url": "https://coding.net/u/willin/p/codewars.js.cool/git"
+    },
+    "edit-link": {
+      "base": "https://coding.net/u/willin/p/codewars.js.cool/git/edit/master/",
+      "label": "编辑此页"
+    },
+    "atoc": {
+      "addClass": true,
+      "className": "atoc"
+    },
+    "addcssjs": {
+      "js": [
+        "static/main.js"
+      ]
+    },
+    "google-adsense": {
+      "ads": [
+        {
+          "client": "ca-pub-5059418763237956",
+          "slot": "4848822846",
+          "format": "auto",
+          "location": ".markdown-section> p:first-of-type",
+          "style": "display: block; height: 90px; margin:15px 0;"
+        }, {
+          "client": "ca-pub-5059418763237956",
+          "slot": "4848822846",
+          "format": "auto",
+          "location": ".markdown-section> p:last-of-type",
+          "style": "display: block; height: 90px; margin:15px 0;"
+        }
+      ]
+    },
+    "sitemap": {
+      "hostname": "https://codewars.js.cool/"
+    },
+    "page-footer-ex": {
+      "copyright":"&copy; <a href='https://willin.wang/' target='_blank'>Willin Wang</a>",
+      "update_label":"更新时间",
+      "update_format":"YYYY-MM-DD HH:mm:ss"
+    },
+    "theme-default": {
+      "showLevel": true
+    },
+    "introduction-text": "封面"
+  }
+}
