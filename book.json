@@ -84,12 +84,6 @@
           "format": "auto",
           "location": ".markdown-section> p:first-of-type",
           "style": "display: block; height: 90px; margin:15px 0;"
-        }, {
-          "client": "ca-pub-5059418763237956",
-          "slot": "4848822846",
-          "format": "auto",
-          "location": ".markdown-section> p:last-of-type",
-          "style": "display: block; height: 90px; margin:15px 0;"
         }
       ]
     },
