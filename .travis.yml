@@ -1,0 +1,19 @@
+language: node_js
+node_js: node
+
+before_install:
+  - export TZ='Asia/Shanghai'
+install:
+  - npm i gitbook-cli -g
+  - gitbook install
+before_script:
+  - git config user.name "Travis-CI"
+  - git config user.email "willin@willin.org"
+script:
+  - gitbook build
+  - cd _book
+  - git init
+  - git add .
+  - git commit -m "Gitbook Auto Deployed"
+  - git push --force "https://${GH_TOKEN}@github.com/willin/learn.js.cool.git" master:gh-pages
+  - git push --force "https://willin:${CODING_TOKEN}@git.dev.tencent.com/willin/learn.js.cool.git" master:master

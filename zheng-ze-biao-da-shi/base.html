@@ -1,0 +1,477 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>正则基础 · 边学边玩酷JS</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-atoc/atoc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fancybox/jquery.fancybox.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="common.html" />
+    
+    
+    <link rel="prev" href="../ecmascript/array.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://v0.chat/" target="_blank" class="custom-link">初瘦</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://codewars.js.cool/" target="_blank" class="custom-link">Codewars 解题集</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ECMAScript</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../ecmascript/array.html">
+            
+                <a href="../ecmascript/array.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">正则表达式</li>
+        
+        
+    
+        <li class="chapter active" data-level="3.1" data-path="base.html">
+            
+                <a href="base.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    正则基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="common.html">
+            
+                <a href="common.html">
+            
+                    
+                        <b>3.2.</b>
+                    
+                    常用正则
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >正则基础</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6B63;&#x5219;&#x57FA;&#x7840;">&#x6B63;&#x5219;&#x57FA;&#x7840;</h1>
+<p>&#x63A8;&#x8350;&#x7684;&#x5728;&#x7EBF;&#x5B66;&#x4E60;&#x3001;&#x7F16;&#x5199;&#x3001;&#x6D4B;&#x8BD5;&#x96C6;&#x6210;&#x5DE5;&#x5177;&#xFF1A; <a href="https://regexr.com/" target="_blank">https://regexr.com/</a></p>
+<h2 id="&#x5B57;&#x7B26;&#x7C7B;">&#x5B57;&#x7B26;&#x7C7B;</h2>
+<h3 id="&#x5339;&#x914D;"><code>[]</code> &#x5339;&#x914D;</h3>
+<p><code>[aeiou]</code> &#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-string">&apos;glib jocks vex dwarves!&apos;</span>.match(<span class="hljs-regexp">/[aeiou]/g</span>)
+<span class="hljs-comment">// =&gt;</span>
+<span class="hljs-comment">// [&quot;i&quot;, &quot;o&quot;, &quot;e&quot;, &quot;a&quot;, &quot;e&quot;]</span>
+</code></pre>
+<p>&#x5339;&#x914D;&#x7ED3;&#x679C;&#xFF1A; gl<strong>i</strong>b j<strong>o</strong>cks v<strong>e</strong>x dw<strong>a</strong>rv<strong>e</strong>s!</p>
+<h3 id="&#x975E;"><code>^</code> &#x975E;</h3>
+<p><code>[^aeiou]</code> &#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-string">&apos;glib jocks vex dwarves!&apos;</span>.match(<span class="hljs-regexp">/[^aeiou]/g</span>)
+<span class="hljs-comment">// =&gt;</span>
+<span class="hljs-comment">// [&quot;g&quot;, &quot;l&quot;, &quot;b&quot;, &quot; &quot;, &quot;j&quot;, &quot;c&quot;, &quot;k&quot;, &quot;s&quot;, &quot; &quot;, &quot;v&quot;, &quot;x&quot;, &quot; &quot;, &quot;d&quot;, &quot;w&quot;, &quot;r&quot;, &quot;v&quot;, &quot;s&quot;, &quot;!&quot;]</span>
+</code></pre>
+<p>&#x5339;&#x914D;&#x7ED3;&#x679C;&#x6B63;&#x597D;&#x4E0E;&#x4E0A;&#x4E00;&#x4E2A;&#x793A;&#x4F8B;&#x4E2D;&#x7684;&#x4E92;&#x8865;</p>
+<h3 id="-&#x8303;&#x56F4;"><code>-</code> &#x8303;&#x56F4;</h3>
+<p>&#x793A;&#x4F8B;&#xFF1A; <code>[a-z]</code> &#x8868;&#x793A;&#x4ECE; a &#x5230; z &#x8303;&#x56F4;&#x5185;&#x7684;&#x6240;&#x6709;&#x5C0F;&#x5199;&#x5B57;&#x6BCD;</p>
+<h3 id="&#x4EFB;&#x610F;&#x5B57;&#x7B26;"><code>.</code> &#x4EFB;&#x610F;&#x5B57;&#x7B26;</h3>
+<p>&#x6CE8;&#x610F;&#xFF0C;<code>.</code> &#x8868;&#x793A;&#x6240;&#x6709;&#x5B57;&#x7B26;&#xFF08;&#x5B57;&#x6BCD;&#x3001;&#x6570;&#x5B57;&#x3001;&#x7B26;&#x53F7;&#xFF09;&#xFF0C;&#x9664;&#x4E86;&#xFF1A;<code>&#x6362;&#x884C;</code></p>
+<h3 id="w-&#x8BCD;&#x8BED;&#xFF08;word&#x7F29;&#x5199;&#xFF09;"><code>\w</code> &#x8BCD;&#x8BED;&#xFF08;word&#x7F29;&#x5199;&#xFF09;</h3>
+<p>&#x7B49;&#x540C;&#x4E8E;&#xFF1A; <code>[A-Za-z0-9_]</code></p>
+<h3 id="w-&#x975E;&#x8BCD;&#x8BED;"><code>\W</code> &#x975E;&#x8BCD;&#x8BED;</h3>
+<p>&#x7B49;&#x540C;&#x4E8E;&#xFF1A; <code>[^A-Za-z0-9_]</code></p>
+<h3 id="d-&#x6570;&#x5B57;"><code>\d</code> &#x6570;&#x5B57;</h3>
+<p>&#x7B49;&#x540C;&#x4E8E;&#xFF1A; <code>[0-9]</code></p>
+<h3 id="d-&#x975E;&#x6570;&#x5B57;"><code>\D</code> &#x975E;&#x6570;&#x5B57;</h3>
+<p>&#x7B49;&#x540C;&#x4E8E;&#xFF1A; <code>[^0-9]</code></p>
+<h3 id="s-&#x7A7A;&#x767D;&#x7B26;"><code>\s</code> &#x7A7A;&#x767D;&#x7B26;</h3>
+<p>&#x5305;&#x62EC;&#xFF1A;&#x7A7A;&#x683C;&#x3001;&#x5236;&#x8868;&#x7B26;&#xFF08;Tab&#xFF09;&#x3001;&#x6362;&#x884C;</p>
+<h3 id="s-&#x975E;&#x7A7A;&#x767D;&#x7B26;"><code>\S</code> &#x975E;&#x7A7A;&#x767D;&#x7B26;</h3>
+<p>&#x4E0E;&#x7A7A;&#x767D;&#x7B26;&#x4E92;&#x8865;</p>
+<h2 id="&#x951A;&#x70B9;">&#x951A;&#x70B9;</h2>
+<h3 id="&#x8D77;&#x59CB;"><code>^</code> &#x8D77;&#x59CB;</h3>
+<p>&#x793A;&#x4F8B;&#xFF1A; <code>/^\d/</code> &#x8868;&#x793A;&#x4EE5;&#x6570;&#x5B57;&#x5F00;&#x5934;</p>
+<h3 id="&#x7ED3;&#x675F;"><code>$</code> &#x7ED3;&#x675F;</h3>
+<p>&#x793A;&#x4F8B;&#xFF1A; <code>/\d$/</code> &#x8868;&#x793A;&#x4EE5;&#x6570;&#x5B57;&#x7ED3;&#x5C3E;</p>
+<h3 id="b-&#x5355;&#x8BCD;&#x8FB9;&#x754C;"><code>\b</code> &#x5355;&#x8BCD;&#x8FB9;&#x754C;</h3>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-string">&apos;she sells seashells&apos;</span>.match(<span class="hljs-regexp">/e\b/g</span>)
+<span class="hljs-comment">// =&gt;</span>
+<span class="hljs-comment">// [&quot;e&quot;]</span>
+<span class="hljs-comment">// &#x6765;&#x81EA;&#x4E8E; sh[e&#x7A7A;&#x683C;]sells</span>
+</code></pre>
+<h3 id="b-&#x975E;&#x5355;&#x8BCD;&#x8FB9;&#x754C;"><code>\B</code> &#x975E;&#x5355;&#x8BCD;&#x8FB9;&#x754C;</h3>
+<p>&#x4E0E; <code>\b</code> &#x4E92;&#x8865;</p>
+<h2 id="&#x8F6C;&#x4E49;&#x5B57;&#x7B26;">&#x8F6C;&#x4E49;&#x5B57;&#x7B26;</h2>
+<h3 id="&#x4FDD;&#x7559;&#x5B57;"><code>\</code> &#x4FDD;&#x7559;&#x5B57;</h3>
+<p>&#x793A;&#x4F8B;&#xFF1A; <code>\\</code> &#x4EE5;&#x5B57;&#x7B26;&#x4E32;&#x5339;&#x914D; <code>\</code></p>
+<h3 id="t-tab"><code>\t</code> Tab</h3>
+<h3 id="n-&#x6362;&#x884C;"><code>\n</code> &#x6362;&#x884C;</h3>
+<h3 id="&#x5176;&#x4ED6;">&#x5176;&#x4ED6;</h3>
+<p>&#x975E;&#x5E38;&#x89C1;&#x7684;&#x8F6C;&#x8BD1;&#x5B57;&#x7B26;&#xFF1A;</p>
+<ul>
+<li><code>\v</code> &#x5782;&#x76F4;Tab</li>
+<li><code>\f</code></li>
+<li><code>\r</code> &#x56DE;&#x8F66;</li>
+<li><code>\0</code> Null</li>
+<li><code>\cI</code></li>
+<li><code>\000</code> &#x516B;&#x8FDB;&#x5236;</li>
+<li><code>\xFF</code> &#x5341;&#x516D;&#x8FDB;&#x5236;</li>
+<li><code>\uFFFF</code> Unicode</li>
+<li><code>\u{FFFF}</code> &#x6269;&#x5C55;Unicode</li>
+</ul>
+<h2 id="&#x7EC4;&#x5408;">&#x7EC4;&#x5408;</h2>
+<h3 id="&#x6355;&#x83B7;&#x5206;&#x7EC4;"><code>()</code> &#x6355;&#x83B7;&#x5206;&#x7EC4;</h3>
+<p>&#x793A;&#x4F8B;&#xFF1A; <code>/(ha)+/</code> &#x5339;&#x914D;&#x91CD;&#x590D;&#x7684; <code>ha</code></p>
+<h3 id="1-&#x6570;&#x7EC4;&#x5F15;&#x7528;"><code>\1</code> &#x6570;&#x7EC4;&#x5F15;&#x7528;</h3>
+<p>&#x793A;&#x4F8B;&#xFF1A; <code>/(\w)a\1/</code> &#x5339;&#x914D;&#x4EE5;a&#x4E3A;&#x4E2D;&#x95F4;&#x5B57;&#x6BCD;&#x7684;&#x4E09;&#x5B57;&#x53E0;&#x5B57;&#x8BCD;&#x5982; <code>dad</code>, <code>hah</code></p>
+<h3 id="&#x975E;&#x6355;&#x83B7;&#x5206;&#x7EC4;"><code>(?:)</code> &#x975E;&#x6355;&#x83B7;&#x5206;&#x7EC4;</h3>
+<p>&#x4F9D;&#x7136;&#x4EE5;&#x5206;&#x7EC4;&#x8FDB;&#x884C;&#x5339;&#x914D;&#xFF0C;&#x4F46;&#x4E0D;&#x4F1A;&#x521B;&#x5EFA;&#x6355;&#x83B7;&#x5206;&#x7EC4;&#x3002;</p>
+<h2 id="&#x89C2;&#x671B;">&#x89C2;&#x671B;</h2>
+<h3 id="&#x5411;&#x540E;&#x5339;&#x914D;"><code>(?=)</code> &#x5411;&#x540E;&#x5339;&#x914D;</h3>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-string">&apos;1pt 2px 3em 4px&apos;</span>.match(<span class="hljs-regexp">/\d(?=px)/g</span>)
+<span class="hljs-comment">// =&gt;</span>
+<span class="hljs-comment">// [&quot;2&quot;, &quot;4&quot;]</span>
+<span class="hljs-comment">// &#x5355;&#x4F4D;&#x4E3A; px &#x7684;&#x4E24;&#x4E2A;&#x7ED3;&#x679C;</span>
+</code></pre>
+<h3 id="&#x5411;&#x540E;&#x53CD;&#x5339;&#x914D;"><code>(?!)</code> &#x5411;&#x540E;&#x53CD;&#x5339;&#x914D;</h3>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-string">&apos;1pt 2px 3em 4px&apos;</span>.match(<span class="hljs-regexp">/\d(?!px)/g</span>)
+<span class="hljs-comment">// =&gt;</span>
+<span class="hljs-comment">// [&quot;1&quot;, &quot;3&quot;]</span>
+<span class="hljs-comment">// &#x5355;&#x4F4D;&#x4E0D;&#x4E3A; px &#x7684;&#x4E24;&#x4E2A;&#x7ED3;&#x679C;</span>
+</code></pre>
+<h2 id="&#x6570;&#x91CF;&#x53CA;&#x66FF;&#x6362;">&#x6570;&#x91CF;&#x53CA;&#x66FF;&#x6362;</h2>
+<h3 id="&#x81F3;&#x5C11;&#x51FA;&#x73B0;&#x4E00;&#x6B21;"><code>+</code> &#x81F3;&#x5C11;&#x51FA;&#x73B0;&#x4E00;&#x6B21;</h3>
+<p>&#x793A;&#x4F8B;&#xFF1A; <code>\d+</code></p>
+<h3 id="&#x51FA;&#x73B0;0&#x6B21;&#x6216;&#x591A;&#x6B21;"><code>*</code> &#x51FA;&#x73B0;0&#x6B21;&#x6216;&#x591A;&#x6B21;</h3>
+<h3 id="nm-&#x51FA;&#x73B0;n&#x5230;m&#x6B21;"><code>{n,m}</code> &#x51FA;&#x73B0;n&#x5230;m&#x6B21;</h3>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<ul>
+<li><code>\d{3}</code> &#x6307;&#x5B9A; 3 &#x4F4D;&#x6570;&#x5B57;</li>
+<li><code>\d{1,3}</code> &#x53EF;&#x4EE5;&#x662F; 1 - 3 &#x4F4D;&#x6570;&#x5B57;</li>
+<li><code>\d{3,}</code> &#x53EF;&#x4EE5;&#x662F; 3&#x4F4D;&#x6216;&#x66F4;&#x591A;&#x4F4D;&#x6570;&#x5B57;</li>
+</ul>
+<h3 id="&#x81F3;&#x591A;&#x51FA;&#x73B0;&#x4E00;&#x6B21;&#xFF08;0-&#x6216;-1&#xFF09;"><code>?</code> &#x81F3;&#x591A;&#x51FA;&#x73B0;&#x4E00;&#x6B21;&#xFF08;0 &#x6216; 1&#xFF09;</h3>
+<p>&#x793A;&#x4F8B;&#xFF1A; <code>/colou?r/</code> &#x5339;&#x914D; color &#x548C; colour</p>
+<h3 id="&#x61D2;&#x5339;&#x914D;"><code>?</code> &#x61D2;&#x5339;&#x914D;</h3>
+<p>&#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6570;&#x91CF;&#x5339;&#x914D;&#x662F;&#x8D2A;&#x5A6A;&#x5339;&#x914D;&#xFF0C;&#x5C3D;&#x53EF;&#x80FD;&#x5339;&#x914D;&#x66F4;&#x591A;&#x3002;</p>
+<p>&#x793A;&#x4F8B;&#xFF1A; <code>/b\w+?/</code> &#x8868;&#x793A;&#x5C3D;&#x53EF;&#x80FD;&#x5C11;&#x7684;&#x5339;&#x914D;&#xFF0C;&#x5982;<code>beers</code>&#x5339;&#x914D;&#x7ED3;&#x679C;&#x4E3A;<code>be</code>&#x3002;</p>
+<h3 id="&#x6216;"><code>|</code> &#x6216;</h3>
+<p>&#x793A;&#x4F8B;&#xFF1A; <code>b(a|e|i)d</code></p>
+<h2 id="&#x5B50;&#x8BED;&#x53E5;">&#x5B50;&#x8BED;&#x53E5;</h2>
+<ul>
+<li><code>$&amp;</code> &#x5339;&#x914D;</li>
+<li><code>$1</code> &#x6355;&#x83B7;&#x5206;&#x7EC4;</li>
+<li>``$```  &#x524D;&#x5339;&#x914D;</li>
+<li><code>$&apos;</code> &#x540E;&#x5339;&#x914D;</li>
+<li><code>$$</code> &#x8F6C;&#x4E49;<code>$</code>&#x7B26;&#x53F7;</li>
+<li><code>\n</code> &#x8F6C;&#x4E49;&#x5B57;&#x7B26;</li>
+</ul>
+<h2 id="&#x6807;&#x8BC6;">&#x6807;&#x8BC6;</h2>
+<ul>
+<li><code>i</code> &#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;</li>
+<li><code>g</code> &#x5168;&#x5C40;&#x641C;&#x7D22;</li>
+<li><code>m</code> &#x591A;&#x884C;</li>
+<li><code>u</code> Unicode</li>
+<li><code>y</code> &#x4ECE;&#x4E0A;&#x6B21;&#x4F4D;&#x7F6E;&#x7EE7;&#x7EED;&#x5E76;&#x5FFD;&#x7565; <code>g</code> &#x5168;&#x5C40;&#x641C;&#x7D22;</li>
+</ul>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; <a href="https://willin.wang/" target="_blank">Willin Wang</a> </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x66F4;&#x65B0;&#x65F6;&#x95F4; 2019-05-04 13:35:34 </span> </footer>
+
+
+<script type="text/javascript">var className='atoc';</script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../ecmascript/array.html" class="navigation navigation-prev " aria-label="Previous page: 数组">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="common.html" class="navigation navigation-next " aria-label="Next page: 常用正则">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"正则基础","level":"3.1","depth":1,"next":{"title":"常用正则","level":"3.2","depth":1,"path":"zheng-ze-biao-da-shi/common.md","ref":"zheng-ze-biao-da-shi/common.md","articles":[]},"previous":{"title":"数组","level":"2.1","depth":1,"path":"ecmascript/array.md","ref":"ecmascript/array.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-footer-ex","addcssjs","atoc","fancybox","-github","-edit-link","google-adsense","-maxiang","-wordcount","-theme-material","highlight","-lunr","fontsettings","-sharing","donate","search","sitemap"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"introduction-text":"封面","fancybox":{"helpers":{"buttons":{}}},"github":{"url":"https://github.com/willin/learn.js.cool/git"},"page-footer-ex":{"copyright":"&copy; <a href='https://willin.wang/' target='_blank'>Willin Wang</a>","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"更新时间"},"atoc":{"addClass":true,"className":"atoc"},"search":{},"addcssjs":{"css":[],"js":["static/main.js"]},"donate":{"alipay":"http://sh.gg/static/images/qr.png","alipayText":"支付宝打赏","button":"赏","title":"如果您觉得受益，请打赏支持！","wechat":"http://sh.gg/static/images/wx.png","wechatText":"微信打赏"},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"sitemap":{"hostname":"https://learn.js.cool/"},"google-adsense":{"ads":[{"client":"ca-pub-5059418763237956","slot":"4848822846","format":"auto","location":".markdown-section> p:first-of-type","style":"display: block; height: 90px; margin:15px 0;"}]},"edit-link":{"base":"https://github.com/willin/learn.js.cool/git/edit/master/","label":"编辑此页"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"toc":true,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":true},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"边学边玩酷JS","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"初瘦":"https://v0.chat/","Codewars 解题集":"https://codewars.js.cool/"}},"gitbook":">=3.2.3","description":"Author: Willin Wang"},"file":{"path":"zheng-ze-biao-da-shi/base.md","mtime":"2019-05-04T05:35:34.338Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-04T05:36:38.051Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-atoc/atoc.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.mousewheel.pack.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.fancybox.pack.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-google-adsense/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+
+    
+    <script type="text/javascript" src="../static/main.js"></script>
+    
+
+    </body>
+</html>
+

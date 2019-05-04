@@ -1,0 +1,487 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数组 · 边学边玩酷JS</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-atoc/atoc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fancybox/jquery.fancybox.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../zheng-ze-biao-da-shi/base.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://v0.chat/" target="_blank" class="custom-link">初瘦</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://codewars.js.cool/" target="_blank" class="custom-link">Codewars 解题集</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ECMAScript</li>
+        
+        
+    
+        <li class="chapter active" data-level="2.1" data-path="array.html">
+            
+                <a href="array.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">正则表达式</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../zheng-ze-biao-da-shi/base.html">
+            
+                <a href="../zheng-ze-biao-da-shi/base.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    正则基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../zheng-ze-biao-da-shi/common.html">
+            
+                <a href="../zheng-ze-biao-da-shi/common.html">
+            
+                    
+                        <b>3.2.</b>
+                    
+                    常用正则
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >数组</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6570;&#x7EC4;">&#x6570;&#x7EC4;</h1>
+<h2 id="map-&#x4ECB;&#x7ECD;">Map &#x4ECB;&#x7ECD;</h2>
+<h3 id="&#x8BED;&#x6CD5;">&#x8BED;&#x6CD5;</h3>
+<pre><code class="lang-javascript">array.map(callback[, thisArg])
+</code></pre>
+<h3 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h3>
+<h4 id="callback">callback</h4>
+<p>&#x539F;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x7ECF;&#x8FC7;&#x8BE5;&#x65B9;&#x6CD5;&#x540E;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5143;&#x7D20;&#x3002;</p>
+<blockquote>
+<p>currentValue</p>
+</blockquote>
+<p>callback &#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x6570;&#x7EC4;&#x4E2D;&#x5F53;&#x524D;&#x88AB;&#x4F20;&#x9012;&#x7684;&#x5143;&#x7D20;&#x3002;</p>
+<blockquote>
+<p>index</p>
+</blockquote>
+<p>callback &#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x6570;&#x7EC4;&#x4E2D;&#x5F53;&#x524D;&#x88AB;&#x4F20;&#x9012;&#x7684;&#x5143;&#x7D20;&#x7684;&#x7D22;&#x5F15;&#x3002;</p>
+<blockquote>
+<p>array</p>
+</blockquote>
+<p>callback &#x7684;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x8C03;&#x7528; map &#x65B9;&#x6CD5;&#x7684;&#x6570;&#x7EC4;&#x3002;</p>
+<h4 id="thisarg">thisArg</h4>
+<p>&#x6267;&#x884C; callback &#x51FD;&#x6570;&#x65F6; this &#x6307;&#x5411;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<h3 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h3>
+<p>&#x7531;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x7EC4;&#x6210;&#x7684;&#x65B0;&#x6570;&#x7EC4;&#x3002;</p>
+<h3 id="&#x4F8B;&#x9898;">&#x4F8B;&#x9898;</h3>
+<p><a href="https://www.codewars.com/kata/double-char" target="_blank">https://www.codewars.com/kata/double-char</a></p>
+<p>Given a string, you have to return a string in which each character (case-sensitive) is repeated once.</p>
+<pre><code class="lang-javascript">doubleChar(<span class="hljs-string">&quot;String&quot;</span>) ==&gt; <span class="hljs-string">&quot;SSttrriinngg&quot;</span>
+
+doubleChar(<span class="hljs-string">&quot;Hello World&quot;</span>) ==&gt; <span class="hljs-string">&quot;HHeelllloo  WWoorrlldd&quot;</span>
+
+doubleChar(<span class="hljs-string">&quot;1234!_ &quot;</span>) ==&gt; <span class="hljs-string">&quot;11223344!!__  &quot;</span>
+</code></pre>
+<p>Good Luck!</p>
+<p>&#x7B54;&#x6848;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> doubleChar = <span class="hljs-function"><span class="hljs-params">str</span> =&gt;</span> str.split(<span class="hljs-string">&apos;&apos;</span>).map(<span class="hljs-function"><span class="hljs-params">i</span> =&gt;</span> i.repeat(<span class="hljs-number">2</span>)).join(<span class="hljs-string">&apos;&apos;</span>);
+</code></pre>
+<h2 id="reduce-&#x4ECB;&#x7ECD;">Reduce &#x4ECB;&#x7ECD;</h2>
+<h3 id="&#x8BED;&#x6CD5;">&#x8BED;&#x6CD5;</h3>
+<pre><code class="lang-javascript">arr.reduce(callback,[initialValue]);
+</code></pre>
+<h3 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h3>
+<h4 id="callback">callback</h4>
+<p>&#x6267;&#x884C;&#x6570;&#x7EC4;&#x4E2D;&#x6BCF;&#x4E2A;&#x503C;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5305;&#x542B;&#x56DB;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;</p>
+<blockquote>
+<p>accumulator</p>
+</blockquote>
+<p>&#x4E0A;&#x4E00;&#x6B21;&#x8C03;&#x7528;&#x56DE;&#x8C03;&#x8FD4;&#x56DE;&#x7684;&#x503C;&#xFF0C;&#x6216;&#x8005;&#x662F;&#x63D0;&#x4F9B;&#x7684;&#x521D;&#x59CB;&#x503C;&#xFF08;initialValue&#xFF09;</p>
+<blockquote>
+<p>currentValue</p>
+</blockquote>
+<p>&#x6570;&#x7EC4;&#x4E2D;&#x6B63;&#x5728;&#x5904;&#x7406;&#x7684;&#x5143;&#x7D20;</p>
+<blockquote>
+<p>currentIndex</p>
+</blockquote>
+<p>&#x6570;&#x636E;&#x4E2D;&#x6B63;&#x5728;&#x5904;&#x7406;&#x7684;&#x5143;&#x7D20;&#x7D22;&#x5F15;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x63D0;&#x4F9B;initialValues&#xFF0C;&#x9ED8;&#x8BA4;&#x4ECE;0&#x5F00;&#x59CB;</p>
+<blockquote>
+<p>array</p>
+</blockquote>
+<p>&#x8C03;&#x7528; reduce &#x7684;&#x6570;&#x7EC4;</p>
+<h4 id="initialvalue">initialValue</h4>
+<p>&#x4F5C;&#x4E3A;&#x7B2C;&#x4E00;&#x6B21;&#x8C03;&#x7528; callback &#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x3002;</p>
+<h3 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h3>
+<p>&#x51FD;&#x6570;&#x7D2F;&#x8BA1;&#x5904;&#x7406;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+<h3 id="&#x4F8B;&#x9898;">&#x4F8B;&#x9898;</h3>
+<p><a href="https://www.codewars.com/kata/beginner-reduce-but-grow" target="_blank">https://www.codewars.com/kata/beginner-reduce-but-grow</a></p>
+<p>Given and array of integers (x), return the result of multiplying the values together in order. Example:</p>
+<pre><code class="lang-text">[1, 2, 3] --&gt; 6
+</code></pre>
+<p>For the beginner, try to use the reduce method - it comes in very handy quite a lot so is a good one to know.</p>
+<p>Array will not be empty.</p>
+<p>&#x7B54;&#x6848;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> grow = <span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> x.reduce(<span class="hljs-function">(<span class="hljs-params">r, i</span>) =&gt;</span> r * i, <span class="hljs-number">1</span>);
+</code></pre>
+<h2 id="&#x904D;&#x5386;&#x7528;map&#x8FD8;&#x662F;for">&#x904D;&#x5386;&#x7528;Map&#x8FD8;&#x662F;For</h2>
+<p>&#x540C;&#x662F;&#x904D;&#x5386;&#xFF0C;&#x4F46;&#x5B9E;&#x9645;&#x6709;&#x5F88;&#x5927;&#x4E0D;&#x540C;&#x3002;</p>
+<h3 id="&#x5BF9;&#x6BD4;">&#x5BF9;&#x6BD4;</h3>
+<h4 id="map">map</h4>
+<p>&#x6539;&#x53D8;&#x81EA;&#x8EAB;&#x3002;</p>
+<pre><code class="lang-javascript">[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>].map(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> x+<span class="hljs-number">1</span>)
+<span class="hljs-comment">// [ 2, 3, 4, 5, 6 ]</span>
+</code></pre>
+<h4 id="for">for</h4>
+<p>&#x53EA;&#x662F;&#x5FAA;&#x73AF;&#x3002;</p>
+<h3 id="benchmark&#x6D4B;&#x8BD5;">Benchmark&#x6D4B;&#x8BD5;</h3>
+<p>benchmark&#x811A;&#x672C;&#xFF1A;</p>
+<pre><code class="lang-javascript">suite(<span class="hljs-string">&apos;iterator&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  bench(<span class="hljs-string">&apos;for&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; a.length; i++) {
+      <span class="hljs-comment">// nothing</span>
+    }
+  });
+  bench(<span class="hljs-string">&apos;foreach&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+    a.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">d</span>) </span>{
+      <span class="hljs-comment">// nothing</span>
+    });
+  });
+  bench(<span class="hljs-string">&apos;for of&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i <span class="hljs-keyword">of</span> a) {
+      <span class="hljs-comment">// nothing</span>
+    }
+  });
+  bench(<span class="hljs-string">&apos;map&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+    a.map(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> x);
+  });
+});
+</code></pre>
+<p>&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-bash">                      iterator
+      50,038,931 op/s &#xBB; <span class="hljs-keyword">for</span>
+       8,980,276 op/s &#xBB; foreach
+       8,990,758 op/s &#xBB; <span class="hljs-keyword">for</span> of
+       1,713,807 op/s &#xBB; map
+
+
+  Suites:  1
+  Benches: 4
+  Elapsed: 5,710.33 ms
+</code></pre>
+<h3 id="&#x7ED3;&#x8BBA;">&#x7ED3;&#x8BBA;</h3>
+<p>&#x5355;&#x51ED;&#x5FAA;&#x73AF; <code>for</code> &#x6700;&#x53EF;&#x9760;&#x3002;</p>
+<p><code>foreach</code> &#x548C; <code>for ... of</code> &#x5DEE;&#x4E0D;&#x591A;&#x3002;</p>
+<p><code>map</code> &#x6027;&#x80FD;&#x6700;&#x4F4E;&#x3002;</p>
+<h2 id="&#x751F;&#x6210;&#x4E00;&#x4E2A;-m-&#x5230;-n-&#x7684;&#x6570;&#x7EC4;">&#x751F;&#x6210;&#x4E00;&#x4E2A; m &#x5230; n &#x7684;&#x6570;&#x7EC4;</h2>
+<p>&#x7528; ES6 &#x7684; Fill &#x7279;&#x6027;&#x53EF;&#x4EE5;&#x907F;&#x514D; <code>new Array(N)</code> &#x65E0;&#x6CD5;&#x88AB; Map &#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> list = <span class="hljs-function">(<span class="hljs-params">m, n</span>) =&gt;</span>
+  <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(n - m + <span class="hljs-number">1</span>).fill(<span class="hljs-number">0</span>).map(<span class="hljs-function">(<span class="hljs-params">_, i</span>) =&gt;</span> m + i);
+</code></pre>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; <a href="https://willin.wang/" target="_blank">Willin Wang</a> </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x66F4;&#x65B0;&#x65F6;&#x95F4; 2019-05-04 13:35:34 </span> </footer>
+
+
+<script type="text/javascript">var className='atoc';</script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 介绍">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../zheng-ze-biao-da-shi/base.html" class="navigation navigation-next " aria-label="Next page: 正则基础">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数组","level":"2.1","depth":1,"next":{"title":"正则基础","level":"3.1","depth":1,"path":"zheng-ze-biao-da-shi/base.md","ref":"zheng-ze-biao-da-shi/base.md","articles":[]},"previous":{"title":"介绍","level":"1.1","depth":1,"path":"INTRO.md","ref":"INTRO.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-footer-ex","addcssjs","atoc","fancybox","-github","-edit-link","google-adsense","-maxiang","-wordcount","-theme-material","highlight","-lunr","fontsettings","-sharing","donate","search","sitemap"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"introduction-text":"封面","fancybox":{"helpers":{"buttons":{}}},"github":{"url":"https://github.com/willin/learn.js.cool/git"},"page-footer-ex":{"copyright":"&copy; <a href='https://willin.wang/' target='_blank'>Willin Wang</a>","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"更新时间"},"atoc":{"addClass":true,"className":"atoc"},"search":{},"addcssjs":{"css":[],"js":["static/main.js"]},"donate":{"alipay":"http://sh.gg/static/images/qr.png","alipayText":"支付宝打赏","button":"赏","title":"如果您觉得受益，请打赏支持！","wechat":"http://sh.gg/static/images/wx.png","wechatText":"微信打赏"},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"sitemap":{"hostname":"https://learn.js.cool/"},"google-adsense":{"ads":[{"client":"ca-pub-5059418763237956","slot":"4848822846","format":"auto","location":".markdown-section> p:first-of-type","style":"display: block; height: 90px; margin:15px 0;"}]},"edit-link":{"base":"https://github.com/willin/learn.js.cool/git/edit/master/","label":"编辑此页"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"toc":true,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":true},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"边学边玩酷JS","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"初瘦":"https://v0.chat/","Codewars 解题集":"https://codewars.js.cool/"}},"gitbook":">=3.2.3","description":"Author: Willin Wang"},"file":{"path":"ecmascript/array.md","mtime":"2019-05-04T05:35:34.338Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-04T05:36:38.051Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-atoc/atoc.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.mousewheel.pack.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.fancybox.pack.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-google-adsense/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+
+    
+    <script type="text/javascript" src="../static/main.js"></script>
+    
+
+    </body>
+</html>
+
