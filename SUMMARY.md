@@ -1,14 +1,13 @@
-# 目录
+# Table of contents
 
-## 介绍
-
-- [介绍](/INTRO.md)
+* [介绍](INTRO.md)
 
 ## ECMAScript
 
-- [数组](base/array.md)
+* [数组](ecmascript/array.md)
 
 ## 正则表达式
 
-- [正则基础](regexp/base.md)
-- [常用正则](regexp/common.md)
+* [正则基础](zheng-ze-biao-da-shi/base.md)
+* [常用正则](zheng-ze-biao-da-shi/common.md)
+

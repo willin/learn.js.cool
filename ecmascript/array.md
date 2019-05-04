@@ -1,12 +1,10 @@
 # 数组
 
-<!-- toc -->
-
 ## Map 介绍
 
 ### 语法
 
-```js
+```javascript
 array.map(callback[, thisArg])
 ```
 
@@ -38,11 +36,11 @@ callback 的第三个参数，调用 map 方法的数组。
 
 ### 例题
 
-<https://www.codewars.com/kata/double-char>
+[https://www.codewars.com/kata/double-char](https://www.codewars.com/kata/double-char)
 
-Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+Given a string, you have to return a string in which each character \(case-sensitive\) is repeated once.
 
-```js
+```javascript
 doubleChar("String") ==> "SSttrriinngg"
 
 doubleChar("Hello World") ==> "HHeelllloo  WWoorrlldd"
@@ -54,16 +52,15 @@ Good Luck!
 
 答案：
 
-```js
+```javascript
 const doubleChar = str => str.split('').map(i => i.repeat(2)).join('');
 ```
-
 
 ## Reduce 介绍
 
 ### 语法
 
-```js
+```javascript
 arr.reduce(callback,[initialValue]);
 ```
 
@@ -99,11 +96,11 @@ arr.reduce(callback,[initialValue]);
 
 ### 例题
 
-<https://www.codewars.com/kata/beginner-reduce-but-grow>
+[https://www.codewars.com/kata/beginner-reduce-but-grow](https://www.codewars.com/kata/beginner-reduce-but-grow)
 
-Given and array of integers (x), return the result of multiplying the values together in order. Example:
+Given and array of integers \(x\), return the result of multiplying the values together in order. Example:
 
-```
+```text
 [1, 2, 3] --> 6
 ```
 
@@ -113,10 +110,9 @@ Array will not be empty.
 
 答案：
 
-```js
+```javascript
 const grow = x => x.reduce((r, i) => r * i, 1);
 ```
-
 
 ## 遍历用Map还是For
 
@@ -128,7 +124,7 @@ const grow = x => x.reduce((r, i) => r * i, 1);
 
 改变自身。
 
-```js
+```javascript
 [1,2,3,4,5].map(x => x+1)
 // [ 2, 3, 4, 5, 6 ]
 ```
@@ -141,7 +137,7 @@ const grow = x => x.reduce((r, i) => r * i, 1);
 
 benchmark脚本：
 
-```js
+```javascript
 suite('iterator', function () {
   bench('for', function () {
     const a = [1, 2, 3, 4, 5];
@@ -195,7 +191,8 @@ suite('iterator', function () {
 
 用 ES6 的 Fill 特性可以避免 `new Array(N)` 无法被 Map 的问题。
 
-```js
+```javascript
 const list = (m, n) =>
   new Array(n - m + 1).fill(0).map((_, i) => m + i);
 ```
+
