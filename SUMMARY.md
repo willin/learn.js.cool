@@ -4,10 +4,10 @@
 
 ## ECMAScript
 
-* [数组](ecmascript/array.md)
+* [数组](es/array.md)
 
 ## 正则表达式
 
-* [正则基础](zheng-ze-biao-da-shi/base.md)
-* [常用正则](zheng-ze-biao-da-shi/common.md)
+* [正则基础](regexp/base.md)
+* [常用正则](regexp/common.md)
 
