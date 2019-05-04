@@ -13,5 +13,5 @@
 
 ## 项目实战
 
-* [随机数字id](xiang-mu-shi-zhan/random-id.md)
+* [随机数字id](practice/random-id.md)
 
