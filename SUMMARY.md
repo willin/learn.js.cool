@@ -14,4 +14,5 @@
 ## 项目实战
 
 * [随机数字id](practice/random-id.md)
+* [OIDC Provider](practice/oidc-provider.md)
 
